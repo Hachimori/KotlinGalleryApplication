@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">KotlinGalleryApplication</string>
+    
+    <!-- ThumbnailGallery -->
+    <string name="thumbnailgallery_error">Error while loading thumbnails</string>
+    <string name="thumbnailgallery_loadmore">Load more photos</string>
+    
+    <!-- DetailPhoto -->
+    <string name="detailphoto_progress_txt">%1$d%%</string>
+    <string name="detailphoto_error">Error while loading photo</string>
+    
+</resources>
