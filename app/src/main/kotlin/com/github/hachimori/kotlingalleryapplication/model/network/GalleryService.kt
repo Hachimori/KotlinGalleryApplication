@@ -2,7 +2,7 @@ package com.github.hachimori.kotlingalleryapplication.model.network
 
 import com.github.hachimori.kotlingalleryapplication.model.entity.DetailPhoto
 import com.github.hachimori.kotlingalleryapplication.model.entity.ThumbnailList
-import retrofit2.Call
+import io.reactivex.Flowable
 import retrofit2.http.GET
 import retrofit2.http.Path
 import retrofit2.http.Query
@@ -22,7 +22,7 @@ interface GalleryService {
      * @param page The page (1-indexed) of photo stream
      */
     @GET("photos")
-    fun getThumbnailList(@Query("feature") feature: String, @Query("page") page: String): Call<ThumbnailList>
+    fun getThumbnailList(@Query("feature") feature: String, @Query("exclude") exclude: String, @Query("page") page: String): Flowable<ThumbnailList>
 
     /**
      * Returns the detailed information of the photo.
@@ -32,5 +32,5 @@ interface GalleryService {
      * @param imageSize size of image (1: the smallest, 4: the largest)
      */
     @GET("photos/{id}")
-    fun getDetailPhoto(@Path("id") id: String, @Query("image_size") imageSize: String): Call<DetailPhoto>
+    fun getDetailPhoto(@Path("id") id: String, @Query("image_size") imageSize: String): Flowable<DetailPhoto>
 }

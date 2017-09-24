@@ -3,7 +3,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
     
     <data>
+        <variable
+            name="view"
+            type="com.github.hachimori.kotlingalleryapplication.ui.thumbnailgallery.ThumbnailGalleryFragment"/>
         
+        <variable
+            name="viewmodel"
+            type="com.github.hachimori.kotlingalleryapplication.ui.thumbnailgallery.ThumbnailGalleryViewModel"/>
     </data>
         
     
@@ -44,6 +50,7 @@
                     android:id="@+id/thumbnail_add_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:onClick="@{() -> viewmodel.loadThumbnailList()}"
                     android:text="@string/thumbnailgallery_loadmore"
                     android:textColor="@color/light_blue"
                     android:textSize="18sp"/>

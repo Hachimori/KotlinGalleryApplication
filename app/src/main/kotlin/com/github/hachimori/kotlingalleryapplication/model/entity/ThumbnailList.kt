@@ -10,4 +10,4 @@ data class ThumbnailList (
         val photos: List<Thumbnail>,
         val total_pages: Int)
 
-data class Thumbnail(var id: String, val imageUrl: String)
+data class Thumbnail(var id: String, val image_url: String)

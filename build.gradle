@@ -30,7 +30,7 @@ ext {
     buildToolsVersion = '26.0.1'
     
     // App dependencies
-    supportLibraryVersion = '26.0.2'
+    supportLibraryVersion = '26.1.0'
     retrofitVersion = '2.2.0'
     okHttpVersion = '3.6.0'
     rxJavaVersion = '2.1.3'
@@ -38,4 +38,5 @@ ext {
     icePickVersion = '3.2.0'
     parcelerVersion = '1.1.9'
     glideVersion = '4.1.1'
+    lifecycleVersion = '1.0.0-beta1'
 }
