@@ -12,23 +12,23 @@ import io.reactivex.disposables.CompositeDisposable
  * Created by benhachimori on 2017/09/16.
  */
 class ThumbnailGalleryViewModel: ViewModel() {
-    
-    private var currentIndex = 1
+
+    private var currentIndex = 0
     private val thumbnailListObservable: MutableLiveData<ThumbnailList> = MutableLiveData()
     private val errorObservable: MutableLiveData<Unit> = MutableLiveData()
-    
+
     private val disposables = CompositeDisposable();
-    
+
     override fun onCleared() {
         disposables.clear()
     }
-    
+
     fun getThumbnailListObservable(): LiveData<ThumbnailList> =
             thumbnailListObservable
-        
+
     fun getErrorObservable(): LiveData<Unit> =
             errorObservable
-    
+
     fun loadThumbnailList() {
         disposables.add(ServiceGenerator
                 .INSTANCE
@@ -40,10 +40,10 @@ class ThumbnailGalleryViewModel: ViewModel() {
                             thumbnailListObservable.value = it
                             currentIndex++
                         },
-                        { errorObservable.value = Unit } 
+                        { errorObservable.value = Unit }
                 )
         )
-        
+
         currentIndex++
     }
 }

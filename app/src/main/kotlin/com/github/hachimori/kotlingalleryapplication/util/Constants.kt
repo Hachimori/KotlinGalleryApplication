@@ -10,5 +10,5 @@ object Constants {
     val API_BASE_URL = "https://api.500px.com/v1/"
 
     /** API Key for accessing 500px's Web API  */
-    val CONSUMER_KEY = "*****"
+    val CONSUMER_KEY = "UU6XQeziu01adhSANZo3J5gDsZD6gaFyJXomYlhz"
 }

@@ -47,7 +47,7 @@ class ThumbnailGalleryFragment: Fragment() {
 
         thumbnailAdapter = ThumbnailAdapter(ArrayList<Thumbnail>(), object : ThumbnailAdapter.OnThumbnailClickListener {
             override fun onThumbnailClicked(viewHolder: ThumbnailViewHolder, position: Int) {
-
+                
                 val thumbnail: Thumbnail = thumbnailAdapter.getItem(position)
 
                 // Specify detail photo's id and image size
