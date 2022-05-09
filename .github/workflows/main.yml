@@ -1,0 +1,13 @@
+name: reviewdog
+on: [pull_request]
+jobs:
+  ktlint:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run ktlint
+        uses: ScaCap/action-ktlint@master
+        with:
+          reporter: github-pr-review
